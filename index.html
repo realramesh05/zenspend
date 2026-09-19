@@ -3,49 +3,1183 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZenSpend - Offline Expense Tracker</title>
+
+  <!-- Primary SEO Meta Tags -->
+  <title>ZenSpend - 100% Offline Expense Tracker & Daily Budget Planner for Android</title>
+  <meta name="title" content="ZenSpend - 100% Offline Expense Tracker & Daily Budget Planner for Android">
+  <meta name="description" content="ZenSpend is a fast, 100% offline expense tracker and daily budget planner for Android. Log expenses in 1 tap, set daily spending limits, track monthly burn rate, and keep your financial data 100% private with zero cloud sync.">
+  <meta name="keywords" content="offline expense tracker, daily budget planner, expense tracker android, 1-tap expense logger, private money manager, offline budget app, no login expense app, daily spending limit, monthly burn rate forecast, cash expense tracker, personal finance offline, private expense tracker android, daily budget manager, expense tracker with backup, upi spending tracker">
+  <meta name="author" content="ZenSpend">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://realramesh05.github.io/zenspend/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://realramesh05.github.io/zenspend/">
+  <meta property="og:title" content="ZenSpend - 100% Offline Expense Tracker & Daily Budget Manager">
+  <meta property="og:description" content="Take control of your daily finances with complete privacy. 100% offline personal expense tracking, 1-tap logging, and daily budget limits on Android.">
+  <meta property="og:image" content="https://realramesh05.github.io/zenspend/assets/og-preview.png">
+  <meta property="og:site_name" content="ZenSpend">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://realramesh05.github.io/zenspend/">
+  <meta property="twitter:title" content="ZenSpend - 100% Offline Expense Tracker & Daily Budget Manager">
+  <meta property="twitter:description" content="Take control of your daily finances with complete privacy. 100% offline personal expense tracking, 1-tap logging, and daily budget limits on Android.">
+  <meta property="twitter:image" content="https://realramesh05.github.io/zenspend/assets/og-preview.png">
+
+  <!-- Theme & Favicon -->
+  <meta name="theme-color" content="#090D16">
+
+  <!-- Schema.org JSON-LD Structured Data for Google Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://realramesh05.github.io/zenspend/#app",
+        "name": "ZenSpend",
+        "operatingSystem": "Android",
+        "applicationCategory": "FinanceApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "ZenSpend is a privacy-first, 100% offline expense tracker and daily budget manager for Android. Track expenses in 1 tap, set daily limits, and analyze spending without any cloud transmission.",
+        "softwareVersion": "1.1.0",
+        "url": "https://realramesh05.github.io/zenspend/",
+        "featureList": [
+          "100% Offline Data Storage",
+          "1-Tap Quick Log Presets",
+          "Today Spotlight with Live Daily Limit Bar",
+          "Monthly Budget Intelligence & Burn-Rate Forecast",
+          "Zero Cloud Sync & No Account Required",
+          "Local Encrypted JSON and CSV Backup"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://realramesh05.github.io/zenspend/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does ZenSpend work without an internet connection?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, 100%! ZenSpend is engineered as a native offline application. Every feature—including logging transactions, tracking daily budget limits, viewing monthly forecasts, and exporting backups—works completely without an internet connection or Wi-Fi."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where is my financial data stored?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your data is stored exclusively on your phone's internal encrypted device storage. It is never uploaded to any cloud server, third-party analytics provider, or remote database."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the 1-Tap Quick Tab Log work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Quick Tabs allow you to save your frequent daily purchases (such as ₹30 Tea, ₹120 Lunch, or ₹40 Commute). Instead of opening a form and typing details each time, you simply tap the preset chip on your home screen to log the expense instantly in under one second."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the Daily Spending Limit work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can set an ongoing daily spending limit (e.g. ₹500/day). The Today Spotlight bar visualizes your spending in real time with color-coded indicators (Green = Safe, Amber = Warning, Red = Exceeded) so you always know your remaining allowance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I transfer my data to a new phone?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. ZenSpend includes a full Data Backup & Restore manager. You can export a clean JSON or CSV file to your phone's Downloads folder, Google Drive, or email, and import it into your new phone in seconds with automatic duplicate detection."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What currencies does ZenSpend support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ZenSpend supports all major global currencies including INR (₹), USD ($), EUR (€), GBP (£), JPY (¥), CAD (CA$), AUD (AU$), and more. You can change your preferred currency anytime in Settings."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <style>
+    :root {
+      --bg-dark: #090D16;
+      --surface-card: #0F172A;
+      --surface-elevated: #1E293B;
+      --surface-glass: rgba(15, 23, 42, 0.7);
+      --primary: #10B981;
+      --primary-glow: rgba(16, 185, 129, 0.25);
+      --primary-light: rgba(16, 185, 129, 0.12);
+      --text-primary: #F8FAFC;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(16, 185, 129, 0.3);
+      --accent-indigo: #6366F1;
+      --accent-purple: #A855F7;
+      --accent-amber: #F59E0B;
+      --danger: #F43F5E;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #090D16;
-      color: #F8FAFC;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navbar */
+    header.navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(9, 13, 22, 0.85);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .nav-inner {
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .brand-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), #059669);
+      display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      margin: 0;
-      padding: 20px;
-      text-align: center;
+      font-weight: 900;
+      font-size: 20px;
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px var(--primary-glow);
     }
-    .card {
-      background: #0F172A;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+    .brand-name {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.5px;
+    }
+    .brand-name span {
+      color: var(--primary);
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+    .nav-cta-btn {
+      background: var(--primary-light);
+      color: var(--primary) !important;
+      padding: 8px 18px;
       border-radius: 20px;
-      padding: 40px 30px;
-      max-width: 500px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      border: 1px solid var(--border-accent);
+      font-size: 13px !important;
+      font-weight: 700 !important;
+      transition: all 0.2s ease;
     }
-    h1 { color: #10B981; margin-bottom: 10px; }
-    p { color: #94A3B8; line-height: 1.6; }
-    a { color: #10B981; text-decoration: none; font-weight: bold; }
-    .badge {
-      display: inline-block;
-      background: rgba(16, 185, 129, 0.15);
-      color: #10B981;
+    .nav-cta-btn:hover {
+      background: var(--primary);
+      color: #FFFFFF !important;
+      box-shadow: 0 4px 16px var(--primary-glow);
+    }
+
+    /* Hero Section */
+    section.hero {
+      padding: 80px 0 60px;
+      text-align: center;
+      position: relative;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary-light);
+      border: 1px solid var(--border-accent);
+      color: var(--primary);
+      padding: 6px 18px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: clamp(34px, 5vw, 56px);
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+      max-width: 900px;
+      margin: 0 auto 22px;
+      color: #FFFFFF;
+    }
+    .hero h1 .highlight {
+      background: linear-gradient(135deg, #10B981 20%, #34D399 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p.subhead {
+      font-size: clamp(16px, 2vw, 20px);
+      color: var(--text-secondary);
+      max-width: 720px;
+      margin: 0 auto 36px;
+      line-height: 1.65;
+    }
+    .cta-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .btn-playstore {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #10B981, #059669);
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: 700;
+      box-shadow: 0 10px 25px var(--primary-glow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-playstore:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(16, 185, 129, 0.4);
+    }
+    .btn-playstore svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--surface-card);
+      color: var(--text-primary);
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 14px;
+      font-size: 15px;
+      font-weight: 600;
+      border: 1px solid var(--border-subtle);
+      transition: all 0.2s ease;
+    }
+    .btn-secondary:hover {
+      background: var(--surface-elevated);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Trust Highlights */
+    .trust-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-subtle);
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13.5px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+    .trust-item svg {
+      color: var(--primary);
+    }
+
+    /* Section Styles */
+    section {
+      padding: 80px 0;
+    }
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 50px;
+    }
+    .section-tag {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 14px;
+      color: #FFFFFF;
+    }
+    .section-desc {
+      color: var(--text-secondary);
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    /* Feature Grid */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 24px;
+    }
+    .feature-card {
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 32px 26px;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-accent);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+    .card-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .icon-emerald { background: rgba(16, 185, 129, 0.15); color: #10B981; }
+    .icon-indigo { background: rgba(99, 102, 241, 0.15); color: #6366F1; }
+    .icon-purple { background: rgba(168, 85, 247, 0.15); color: #A855F7; }
+    .icon-amber { background: rgba(245, 158, 11, 0.15); color: #F59E0B; }
+    .icon-rose { background: rgba(244, 63, 94, 0.15); color: #F43F5E; }
+    .icon-cyan { background: rgba(6, 182, 212, 0.15); color: #06B6D4; }
+
+    .feature-card h3 {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: #FFFFFF;
+      letter-spacing: -0.3px;
+    }
+    .feature-card p {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Usage Guide Section (How to Use) */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    .step-card {
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 32px 24px;
+      position: relative;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .step-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--border-accent);
+    }
+    .step-number {
+      font-size: 13px;
+      font-weight: 900;
+      color: var(--primary);
+      background: var(--primary-light);
       padding: 4px 12px;
       border-radius: 12px;
+      display: inline-block;
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+    }
+    .step-card h3 {
+      font-size: 18px;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+    }
+    .step-card p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Comparison Table Section */
+    .table-container {
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      overflow-x: auto;
+      margin-top: 30px;
+    }
+    table.comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      min-width: 600px;
+    }
+    table.comparison-table th,
+    table.comparison-table td {
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 14.5px;
+    }
+    table.comparison-table th {
+      background: var(--surface-elevated);
+      color: var(--text-primary);
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+    table.comparison-table th.highlight-col,
+    table.comparison-table td.highlight-col {
+      background: rgba(16, 185, 129, 0.07);
+      color: #34D399;
+      font-weight: 700;
+    }
+    table.comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Target Audience / Use Cases */
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .audience-card {
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 18px;
+      padding: 24px;
+      transition: all 0.2s ease;
+    }
+    .audience-card:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .audience-tag {
       font-size: 12px;
-      font-weight: bold;
-      margin-bottom: 15px;
+      font-weight: 700;
+      color: var(--accent-indigo);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+    .audience-card h3 {
+      font-size: 18px;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+    .audience-card p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    /* Why ZenSpend Story Box */
+    .story-box {
+      background: linear-gradient(145deg, #0F172A, #131E35);
+      border: 1px solid var(--border-accent);
+      border-radius: 24px;
+      padding: 48px 36px;
+      margin-top: 20px;
+    }
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 36px;
+      align-items: center;
+    }
+    .story-left h3 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+      color: #FFFFFF;
+    }
+    .story-left p {
+      color: var(--text-secondary);
+      font-size: 15.5px;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .comparison-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .comparison-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--border-subtle);
+    }
+    .comparison-item svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .comparison-item span {
+      font-size: 14px;
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* FAQ Section with Native Accessible details/summary */
+    .faq-list {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    details.faq-item {
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 20px 24px;
+      transition: all 0.2s ease;
+    }
+    details.faq-item[open] {
+      border-color: var(--border-accent);
+      background: var(--surface-elevated);
+    }
+    summary.faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16.5px;
+      font-weight: 700;
+      color: #FFFFFF;
+      cursor: pointer;
+      list-style: none;
+      user-select: none;
+    }
+    summary.faq-question::-webkit-details-marker {
+      display: none;
+    }
+    .faq-chevron {
+      transition: transform 0.2s ease;
+      color: var(--text-secondary);
+    }
+    details.faq-item[open] .faq-chevron {
+      transform: rotate(180deg);
+      color: var(--primary);
+    }
+    .faq-answer {
+      margin-top: 14px;
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    /* Bottom Download Banner */
+    .download-banner {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(99, 102, 241, 0.1) 100%);
+      border: 1.5px solid var(--border-accent);
+      border-radius: 28px;
+      padding: 60px 30px;
+      text-align: center;
+      margin: 40px 0;
+      position: relative;
+    }
+    .download-banner h2 {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+      color: #FFFFFF;
+    }
+    .download-banner p {
+      font-size: 17px;
+      color: var(--text-secondary);
+      max-width: 650px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+    }
+    .download-badge-note {
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 50px 0 30px;
+      background: #060910;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-bottom: 30px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+    .copyright {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      padding-top: 24px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      section.hero {
+        padding: 50px 0 40px;
+      }
+      .story-box {
+        padding: 30px 20px;
+      }
+      .trust-row {
+        gap: 16px;
+      }
+      .trust-item {
+        font-size: 12.5px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="badge">100% OFFLINE & PRIVATE</div>
-    <h1>ZenSpend</h1>
-    <p>Smart, private, and effortless offline expense tracking & daily budget management for Android.</p>
-  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="brand" aria-label="ZenSpend Home">
+        <div class="brand-logo">Z</div>
+        <div class="brand-name">Zen<span>Spend</span></div>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#why-zenspend">Philosophy</a></li>
+          <li><a href="#comparison">Compare</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="app-ads.txt">app-ads.txt</a></li>
+          <li><a href="#download" class="nav-cta-btn">Download App</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          100% Offline & Private Expense Tracker
+        </div>
+
+        <h1>Track Your Daily Expenses <br><span class="highlight">Without Sacrificing Your Privacy</span></h1>
+
+        <p class="subhead">
+          ZenSpend is a lightning-fast offline expense tracker and daily budget planner for Android. Zero cloud sync, zero login accounts, and 1-tap logging for every single spend.
+        </p>
+
+        <div class="cta-group" id="download">
+          <!-- Play Store Download CTA Button -->
+          <a href="https://play.google.com/store/apps/details?id=com.ramesh.zenspend" target="_blank" rel="noopener" class="btn-playstore" aria-label="Download ZenSpend on Google Play Store">
+            <svg viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186c-.365-.327-.61-.81-.61-1.35V3.164c0-.54.245-1.023.61-1.35zm11.306 11.308l2.584 2.584-11.776 6.77 9.192-9.354zm2.584-2.584l-2.584 2.584-9.192-9.354 11.776 6.77zm1.189 1.188l3.14 1.803c.895.514.895 1.357 0 1.872l-3.14 1.803-2.072-2.739 2.072-2.739z"/></svg>
+            Download on Google Play
+          </a>
+          <a href="#how-it-works" class="btn-secondary">See How It Works ↓</a>
+        </div>
+
+        <div class="trust-row">
+          <div class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            100% On-Device Vault
+          </div>
+          <div class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path></svg>
+            No Account or Login Needed
+          </div>
+          <div class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Encrypted JSON & CSV Backup
+          </div>
+          <div class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            1-Second Quick Logging
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Features Grid -->
+    <section id="features">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">POWERFUL & SIMPLE</div>
+          <h2 class="section-title">Everything You Need to Master Your Daily Budget</h2>
+          <p class="section-desc">Traditional finance apps are cluttered, slow, and send your financial records to unknown cloud servers. ZenSpend was built from scratch for speed, simplicity, and complete privacy.</p>
+        </div>
+
+        <div class="feature-grid">
+          <!-- Feature 1 -->
+          <article class="feature-card">
+            <div class="card-icon-box icon-emerald">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3>Today Spotlight & Day Limit</h3>
+            <p>Set an ongoing daily spending limit (e.g. ₹500/day or $20/day). Live color-coded progress bars show exactly what you have left today. Stay green on budget, get instant visual warnings if you exceed your daily allowance.</p>
+          </article>
+
+          <!-- Feature 2 -->
+          <article class="feature-card">
+            <div class="card-icon-box icon-amber">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <h3>1-Tap Quick Tab Logger</h3>
+            <p>Record frequent recurring expenses like Chai/Tea, Lunch, Metro, Fuel, or Groceries in a single tap without manual typing. Customize your own one-touch presets with custom categories and default amounts.</p>
+          </article>
+
+          <!-- Feature 3 -->
+          <article class="feature-card">
+            <div class="card-icon-box icon-indigo">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            </div>
+            <h3>Monthly Burn-Rate & Forecast</h3>
+            <p>Smart monthly intelligence projects your estimated end-of-month spend based on your daily spending velocity. Catch budget overruns weeks before they happen with category-wise spending distribution.</p>
+          </article>
+
+          <!-- Feature 4 -->
+          <article class="feature-card">
+            <div class="card-icon-box icon-purple">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3>100% Offline Vault</h3>
+            <p>Your data never leaves your device. No cloud transmission, no trackers, no telemetries, and no external databases. Works flawlessly in airplane mode and zero-connectivity environments.</p>
+          </article>
+
+          <!-- Feature 5 -->
+          <article class="feature-card">
+            <div class="card-icon-box icon-cyan">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            </div>
+            <h3>Local Backup & CSV Export</h3>
+            <p>Own your financial data 100%. Export and restore your complete transaction history anytime via JSON or CSV spreadsheet format with smart duplicate detection and merge controls.</p>
+          </article>
+
+          <!-- Feature 6 -->
+          <article class="feature-card">
+            <div class="card-icon-box icon-rose">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path></svg>
+            </div>
+            <h3>Zero Accounts & Zero Spam</h3>
+            <p>No email signups, no phone OTPs, and no spammy push notifications. Install the app, open it, and start logging expenses instantly in under 2 seconds.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Usage Guide Section (How to Use ZenSpend) -->
+    <section id="how-it-works" style="background: rgba(15, 23, 42, 0.3);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">STEP-BY-STEP USAGE GUIDE</div>
+          <h2 class="section-title">How ZenSpend Works in Daily Life</h2>
+          <p class="section-desc">Budgeting shouldn't feel like a part-time job. ZenSpend is engineered for the real world: fast, intuitive, and frictionless.</p>
+        </div>
+
+        <div class="steps-grid">
+          <!-- Step 1 -->
+          <div class="step-card">
+            <div class="step-number">STEP 01</div>
+            <h3>Install & Launch Instantly</h3>
+            <p>No accounts, no email verification, no phone number, and no bank linking required. Open the app and you are immediately on the dashboard ready to track.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card">
+            <div class="step-number">STEP 02</div>
+            <h3>Set Your Daily Limit</h3>
+            <p>Enter your comfortable daily budget (e.g., ₹500 or $25). The app automatically calculates your live balance and adjusts progress indicators throughout the day.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card">
+            <div class="step-number">STEP 03</div>
+            <h3>Log Spends in 1 Tap</h3>
+            <p>Bought coffee, chai, or lunch? Tap your custom Quick Tab preset. The transaction is recorded in 0.5 seconds with category, timestamp, and amount.</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="step-card">
+            <div class="step-number">STEP 04</div>
+            <h3>Review & Export Anytime</h3>
+            <p>View monthly velocity forecasts, category breakdowns, and export full reports to CSV or JSON for Excel/Google Sheets whenever you want.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Target Audience & Use Cases -->
+    <section id="use-cases">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">WHO IS IT FOR?</div>
+          <h2 class="section-title">Designed for Real Spenders & Savers</h2>
+          <p class="section-desc">Whether you track cash, UPI, cards, or daily allowances, ZenSpend fits your lifestyle effortlessly.</p>
+        </div>
+
+        <div class="audience-grid">
+          <div class="audience-card">
+            <div class="audience-tag">Students & Budgeters</div>
+            <h3>College & Pocket Money</h3>
+            <p>Keep strict control over your monthly allowance without complicated financial jargon or bank account logins.</p>
+          </div>
+
+          <div class="audience-card">
+            <div class="audience-tag">Daily Commuters</div>
+            <h3>Transit, Tea & Lunch</h3>
+            <p>1-tap presets make it effortless to log daily transit tickets, chai breaks, snacks, and lunch without breaking stride.</p>
+          </div>
+
+          <div class="audience-card">
+            <div class="audience-tag">Freelancers & Pros</div>
+            <h3>Cash Flow & Out-of-Pocket</h3>
+            <p>Easily separate personal out-of-pocket expenses and export clean CSV sheets for monthly accounting.</p>
+          </div>
+
+          <div class="audience-card">
+            <div class="audience-tag">Privacy Advocates</div>
+            <h3>Zero Cloud Footprint</h3>
+            <p>Keep your financial data completely isolated from big tech ad networks, telemarketers, and cloud data leaks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why ZenSpend Section (The Story & Philosophy) -->
+    <section id="why-zenspend" style="background: rgba(15, 23, 42, 0.4);">
+      <div class="container">
+        <div class="story-box">
+          <div class="story-grid">
+            <div class="story-left">
+              <div class="section-tag">THE ZENSPEND PHILOSOPHY</div>
+              <h3>Why We Refuse to Store Your Data in the Cloud</h3>
+              <p>
+                Most personal finance apps today force you to link your bank account, create an online profile, and upload every private transaction to third-party servers. Your financial habits are mined for targeted ads, credit card sales, and loan pitches.
+              </p>
+              <p>
+                <strong>ZenSpend takes the exact opposite approach.</strong> We believe personal expenses are deeply private. By keeping all calculations and databases 100% local on your Android phone, you get unmatched speed, zero server downtimes, and absolute peace of mind.
+              </p>
+            </div>
+            <div class="story-right">
+              <div class="comparison-list">
+                <div class="comparison-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>ZenSpend:</strong> 100% on-device local storage with zero cloud risk</span>
+                </div>
+                <div class="comparison-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>ZenSpend:</strong> No account, no email, no phone number required</span>
+                </div>
+                <div class="comparison-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>ZenSpend:</strong> 1-Tap Quick Logging in less than 1 second</span>
+                </div>
+                <div class="comparison-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>ZenSpend:</strong> Instant CSV/JSON export whenever you want</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table Section -->
+    <section id="comparison">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">TRANSPARENT COMPARISON</div>
+          <h2 class="section-title">ZenSpend vs. Traditional Cloud Finance Apps</h2>
+          <p class="section-desc">See why thousands of privacy-conscious users are switching away from bloated, cloud-based money managers.</p>
+        </div>
+
+        <div class="table-container">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th class="highlight-col">ZenSpend (Offline)</th>
+                <th>Typical Cloud Finance Apps</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Data Storage</strong></td>
+                <td class="highlight-col">100% On-Device (Encrypted)</td>
+                <td>Remote Cloud Servers & Databases</td>
+              </tr>
+              <tr>
+                <td><strong>Account Requirement</strong></td>
+                <td class="highlight-col">Zero Accounts / No Login</td>
+                <td>Mandatory Email, Phone OTP & Profile</td>
+              </tr>
+              <tr>
+                <td><strong>Logging Speed</strong></td>
+                <td class="highlight-col">1-Tap (~0.5 seconds)</td>
+                <td>Multi-step forms (~10–15 seconds)</td>
+              </tr>
+              <tr>
+                <td><strong>Works Offline?</strong></td>
+                <td class="highlight-col">Yes, 100% without internet</td>
+                <td>Requires constant network connection</td>
+              </tr>
+              <tr>
+                <td><strong>Data Monetization & Ads</strong></td>
+                <td class="highlight-col">Zero data tracking or selling</td>
+                <td>Data mined for loans & credit cards</td>
+              </tr>
+              <tr>
+                <td><strong>Daily Limit Guidance</strong></td>
+                <td class="highlight-col">Live Color-Coded Spotlight Bar</td>
+                <td>Often complex monthly charts only</td>
+              </tr>
+              <tr>
+                <td><strong>Data Ownership</strong></td>
+                <td class="highlight-col">Instant JSON & CSV Export/Import</td>
+                <td>Vendor lock-in or difficult export</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section for SEO Rich Snippets -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">FREQUENTLY ASKED QUESTIONS</div>
+          <h2 class="section-title">Everything You Need to Know About ZenSpend</h2>
+          <p class="section-desc">Have questions about how ZenSpend protects your privacy and simplifies your daily budget? Find your answers below.</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" name="faq-group">
+            <summary class="faq-question">
+              <span>Does ZenSpend work without an internet connection?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer">
+              Yes, 100%! ZenSpend is engineered from the ground up as a native offline app. Every single feature—including logging transactions, tracking daily budget limits, viewing charts, and exporting backups—works completely without an internet connection, mobile data, or Wi-Fi.
+            </div>
+          </details>
+
+          <details class="faq-item" name="faq-group">
+            <summary class="faq-question">
+              <span>Where is my financial data stored?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer">
+              Your financial data is stored exclusively on your phone's internal device storage. It is never transmitted to any cloud server, third-party analytics provider, or remote database. You have 100% data sovereignty.
+            </div>
+          </details>
+
+          <details class="faq-item" name="faq-group">
+            <summary class="faq-question">
+              <span>How does the 1-Tap Quick Tab Logger work?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer">
+              Quick Tabs allow you to save your frequent daily purchases (like ₹30 Tea, ₹120 Lunch, or ₹40 Commute). Instead of opening a form and typing the details each time, you simply tap the chip on your home screen to log the expense instantly in under 1 second.
+            </div>
+          </details>
+
+          <details class="faq-item" name="faq-group">
+            <summary class="faq-question">
+              <span>How does the Daily Spending Limit work?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer">
+              You can set your desired daily spending allowance in Settings (e.g. ₹500/day or $20/day). The Today Spotlight bar on your home screen visualizes your daily spending in real-time with color-coded bars: Green when you are safely on track, Amber when approaching your limit, and Red if you exceed your daily allowance.
+            </div>
+          </details>
+
+          <details class="faq-item" name="faq-group">
+            <summary class="faq-question">
+              <span>Can I transfer my data to a new phone?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer">
+              Yes! ZenSpend includes a complete Data Backup & Restore manager. You can export a clean JSON or CSV file to your phone's Downloads folder, Google Drive, or email, and import it into your new phone in seconds with smart duplicate detection.
+            </div>
+          </details>
+
+          <details class="faq-item" name="faq-group">
+            <summary class="faq-question">
+              <span>What currencies does ZenSpend support?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer">
+              ZenSpend supports all major global currencies including INR (₹), USD ($), EUR (€), GBP (£), JPY (¥), CAD (CA$), AUD (AU$), and more. You can change your preferred currency anytime in Settings with automatic symbol formatting across the entire app.
+            </div>
+          </details>
+
+          <details class="faq-item" name="faq-group">
+            <summary class="faq-question">
+              <span>Is ZenSpend free to use?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer">
+              Yes, ZenSpend is free to download and use on Android. All core tracking, daily limits, quick tabs, and backup features are fully accessible without subscription paywalls.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA Banner -->
+    <section>
+      <div class="container">
+        <div class="download-banner">
+          <h2>Ready to Master Your Spending?</h2>
+          <p>Join smart spenders who track their daily finances privately, effortlessly, and offline with ZenSpend.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.ramesh.zenspend" target="_blank" rel="noopener" class="btn-playstore" style="font-size: 17px; padding: 16px 32px;" aria-label="Download ZenSpend on Google Play">
+            <svg viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186c-.365-.327-.61-.81-.61-1.35V3.164c0-.54.245-1.023.61-1.35zm11.306 11.308l2.584 2.584-11.776 6.77 9.192-9.354zm2.584-2.584l-2.584 2.584-9.192-9.354 11.776 6.77zm1.189 1.188l3.14 1.803c.895.514.895 1.357 0 1.872l-3.14 1.803-2.072-2.739 2.072-2.739z"/></svg>
+            Download ZenSpend for Android
+          </a>
+          <p class="download-badge-note">Free on Google Play • Requires Android 8.0 or higher • 100% Offline</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="brand">
+          <div class="brand-logo">Z</div>
+          <div class="brand-name">Zen<span>Spend</span></div>
+        </div>
+        <div class="footer-links">
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#why-zenspend">Philosophy</a>
+          <a href="#comparison">Compare</a>
+          <a href="#faq">FAQ</a>
+          <a href="app-ads.txt">app-ads.txt</a>
+          <a href="https://play.google.com/store/apps/details?id=com.ramesh.zenspend" target="_blank" rel="noopener">Google Play Store</a>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2026 ZenSpend. Built with privacy in mind. All data remains 100% on your device.
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
